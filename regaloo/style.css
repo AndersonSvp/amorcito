@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f0f;
+    overflow-x: hidden;
+    color: white;
+}
+
+/* Fondo aesthetic */
+.background{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+
+    background:
+        radial-gradient(circle at top, rgba(255,105,180,0.3), transparent 40%),
+        radial-gradient(circle at bottom, rgba(138,43,226,0.3), transparent 40%),
+        #0f0f0f;
+
+    z-index: -1;
+}
+
+/* Centrar contenido */
+.hero{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Tarjeta glassmorphism */
+.glass-card{
+    width: 100%;
+    max-width: 600px;
+
+    padding: 60px 40px;
+
+    border-radius: 30px;
+
+    background: rgba(255,255,255,0.08);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    backdrop-filter: blur(12px);
+
+    text-align: center;
+
+    box-shadow: 0 0 40px rgba(255,105,180,0.15);
+}
+
+/* Título */
+.title{
+    font-family: 'Dancing Script', cursive;
+    font-size: 4rem;
+
+    margin-bottom: 15px;
+}
+
+/* Subtítulo */
+.subtitle{
+    font-size: 1.1rem;
+    opacity: 0.85;
+
+    margin-bottom: 35px;
+}
+
+/* Botón */
+button{
+    border: none;
+
+    padding: 15px 40px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(45deg, #ff4fa3, #c471ed);
+
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Hover botón */
+button:hover{
+    transform: scale(1.05);
+
+    box-shadow: 0 0 20px rgba(255,105,180,0.5);
+}
+
+/* Mensaje oculto */
+.hidden-message{
+
+    margin-top: 40px;
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition: 1s;
+}
+
+/* Mostrar mensaje */
+.hidden-message.show{
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+.hidden-message h2{
+
+    margin-bottom: 15px;
+
+    font-size: 2rem;
+}
+
+.hidden-message p{
+
+    opacity: 0.8;
+
+    line-height: 1.7;
+}
+
+/* Partículas */
+.particles{
+
+    position: fixed;
+
+    width: 100%;
+    height: 100vh;
+
+    top: 0;
+    left: 0;
+
+    background-image:
+        radial-gradient(white 1px, transparent 1px);
+
+    background-size: 40px 40px;
+
+    opacity: 0.15;
+
+    animation: moveParticles 20s linear infinite;
+
+    z-index: -1;
+}
+
+/* Movimiento partículas */
+@keyframes moveParticles{
+
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(-40px);
+    }
+}
+
+/* Sección recuerdos */
+.memories{
+
+    min-height: 100vh;
+
+    padding: 100px 10%;
+
+    text-align: center;
+}
+
+/* Título */
+.memories-title{
+
+    font-size: 3rem;
+
+    margin-bottom: 20px;
+}
+
+/* Texto */
+.memories-text{
+
+    max-width: 700px;
+
+    margin: auto;
+
+    opacity: 0.8;
+
+    line-height: 1.8;
+
+    margin-bottom: 60px;
+}
+
+/* Galería */
+.gallery{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 30px;
+
+    margin-top: 50px;
+}
+
+/* Tarjetas */
+.photo-card{
+    width: 300px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.6s;
+
+    opacity: 0;
+
+    transform: translateY(40px);
+    
+}
+
+/* Mostrar tarjetas */
+.photo-card.show{
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+/* Hover */
+.photo-card:hover{
+
+    transform: translateY(-10px);
+
+    box-shadow: 0 0 30px rgba(255,105,180,0.2);
+}
+
+/* Imagen */
+.photo-card img{
+
+    width: 100%;
+
+    height: 350px;
+
+    object-fit: cover;
+}
+
+/* Texto debajo */
+.photo-card p{
+
+    padding: 20px;
+
+    line-height: 1.7;
+
+    opacity: 0.9;
+}
+
+/* Carta final */
+.love-letter{
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 100px 10%;
+}
+
+/* Tarjeta carta */
+.letter-card{
+
+    max-width: 800px;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(12px);
+
+    padding: 60px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 0 40px rgba(255,105,180,0.12);
+}
+
+/* Título */
+.letter-card h2{
+
+    font-size: 3rem;
+
+    margin-bottom: 30px;
+}
+
+/* Texto */
+.letter-card p{
+
+    line-height: 2;
+
+    margin-bottom: 25px;
+
+    opacity: 0.9;
+}
+
+/* Firma */
+.letter-card h3{
+
+    margin-top: 40px;
+
+    font-family: 'Dancing Script', cursive;
+
+    font-size: 2.5rem;
+
+    color: #ff9ad5;
+}
+
+/* Contenido oculto */
+#mainContent{
+
+    display: none;
+}
